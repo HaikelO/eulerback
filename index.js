@@ -43,7 +43,6 @@ peerserver.on('connection', (id) => {
   
 });
 peerserver.on('data', (data) => {
-  console.log('data', data);
 });
 
 /* io.of('/user').on('connection', (client) => {
