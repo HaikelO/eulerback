@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,10 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "mongoose": "^5.2.14",
+    "peer": "^0.2.10",
+    "simple-peer": "^9.1.2",
     "socket.io": "^2.1.1",
-    "socket.io-stream": "^0.9.1"
+    "socket.io-stream": "^0.9.1",
+    "wrtc": "^0.2.0"
   }
 }

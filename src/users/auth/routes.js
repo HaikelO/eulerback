@@ -1,4 +1,4 @@
-var AuthController = require('./controller');
+const AuthController = require('./controller');
 
 function AuthRoutes(app) {
     app.post('/api/login', function (req, res) {
