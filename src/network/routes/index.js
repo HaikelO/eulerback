@@ -1,3 +1,3 @@
-module.exports = function (app) {
-    require('./../info/routes')(app);
+module.exports = function (app, port) {
+    require('./../info/routes')(app, port);
 };

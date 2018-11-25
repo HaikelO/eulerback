@@ -55,6 +55,6 @@ app.all('*', function (req, res, next) {
     next();
 });
 
-require('./src/router')(app);
+require('./src/router')(app, port);
 
 module.exports = app;
