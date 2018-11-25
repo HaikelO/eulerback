@@ -1,4 +1,4 @@
 module.exports = {
-    port : '9000',
+    port : process.env.PORT || 5000,
     ioPort: '8000',
 };
