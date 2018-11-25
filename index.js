@@ -45,42 +45,7 @@ peerserver.on('connection', (id) => {
 peerserver.on('data', (data) => {
 });
 
-/* io.of('/user').on('connection', (client) => {
-    console.log('New client');
-    ss(client).on('stream', function(stream, data) {
-        console.log('stream', stream);
-        console.log('data', data);
-      });
-}); */
 
-/* peer1.on('signal', function (data) {
-    // when peer1 has signaling data, give it to peer2 somehow
-    peer2.signal(data);
-});
-
-peer2.on('signal', function (data) {
-    // when peer2 has signaling data, give it to peer1 somehow
-    peer1.signal(data);
-});
-
-peer1.on('connect', function () {
-    // wait for 'connect' event before using the data channel
-    peer1.send('hey peer23, how is it going?');
-});
-
-peer2.on('data', function (data) {
-    // got a data channel message
-    console.log('got a message from peer1: ' + data);
-});
-
-io.sockets.on('connection', function (socket) {
-    console.log('New Client');
-    socket.on('stream', function (data) {
-        console.log('New Streamer', data);
-        socket.emit('capture', data);
-    });    
-});
- */
 app.all('*', function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
