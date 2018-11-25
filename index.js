@@ -23,8 +23,8 @@ var peer2 = new Peer({ wrtc: wrtc }); */
 
 // Configuration
 // ======================================================================
-const server = app.listen(port, function () {
-    console.log("App listening on port " + port);
+const server = app.listen(9000, function () {
+    console.log("App listening on port " + 9000);
 });
 
 const options = {
