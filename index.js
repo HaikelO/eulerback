@@ -55,8 +55,8 @@ app.all('*', function (req, res, next) {
 
 require('./src/router')(app);
 
-server.listen(port, function () {
+/* server.listen(port, function () {
   console.log("App listening on port " + port);
-});
+}); */
 
 module.exports = app;
