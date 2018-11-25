@@ -23,10 +23,12 @@ var peer2 = new Peer({ wrtc: wrtc }); */
 
 // Configuration
 // ======================================================================
-const server = app.listen(9000);
+const server = app.listen(port, function () {
+    console.log("App listening on port " + port);
+});
 
 const options = {
-  debug: true
+    debug: true
 }
 
 const peerserver = ExpressPeerServer(server, options);
@@ -38,25 +40,21 @@ app.use(bodyParser.urlencoded({ 'extended': 'true' }));
 app.use(bodyParser.json());
 
 peerserver.on('connection', (id) => {
-  console.log('NEW CONNECTION', id);
-  const conn = peerserver.connect(id);
-  
+    console.log('NEW CONNECTION', id);
+    const conn = peerserver.connect(id);
+
 });
 peerserver.on('data', (data) => {
 });
 
 
 app.all('*', function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
-  next();
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
 });
 
 require('./src/router')(app);
-
-/* server.listen(port, function () {
-  console.log("App listening on port " + port);
-}); */
 
 module.exports = app;

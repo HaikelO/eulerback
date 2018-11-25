@@ -18,5 +18,8 @@
     "socket.io": "^2.1.1",
     "socket.io-stream": "^0.9.1",
     "wrtc": "^0.2.0"
+  },
+  "engines": {
+    "node": "8.11.2"
   }
 }
